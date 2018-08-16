@@ -1,3 +1,8 @@
+:root {
+	--trans-props: 400ms cubic-bezier(1, 0.18, 0, 0.74);
+	--trans-props-shorts: 400ms cubic-bezier(1, 0, 0, 1);
+}
+
 body::before {
 	content: "";
 	background: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ftremendouswallpapers.com%2Fwp-content%2Fuploads%2F2014%2F12%2Fhd-nature-wallpapers-1920x1080.jpg&f=1") center / cover;
@@ -38,6 +43,7 @@ body {
 	height: 10vh;
 	margin: 0 0.5vw;
 	background: rgba(255, 255, 255, 0.2);
+	transition: top var(--trans-props-shorts);
 	display: inline-block;
 	border-radius: 10vh;
 }
@@ -52,6 +58,10 @@ body {
 	top: calc(10vh * -1 / 2);
 }
 
+.wrapper:hover .shortcuts a {
+	top: 0;
+}
+
 
 /* search box */
 
@@ -59,7 +69,7 @@ body {
 .container {
 	width: 10vh;
 	margin: 1vw 0 calc(1vw + 1vw / 2) 0;
-	transition: width 400ms;
+	transition: width var(--trans-props);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -76,7 +86,7 @@ body {
 .search {
 	width: 100%;
 	height: 10vh;
-	transition: padding-right 400ms;
+	transition: padding-right var(--trans-props);
 }
 
 .search input {
@@ -87,7 +97,7 @@ body {
 	border: none;
 	border-radius: 10vh;
 	outline: none;
-	transition: padding-left 400ms, color 400ms;
+	transition: padding-left var(--trans-props), var(--trans-props);
 }
 
 .wrapper:hover .container .search > input {
