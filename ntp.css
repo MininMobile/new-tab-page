@@ -125,6 +125,23 @@ body {
 	transition: padding-right var(--trans-props);
 }
 
+.search::before {
+	content: "pp";
+	width: var(--scale);
+	height: var(--scale);
+	color: var(--text-color);
+	opacity: 1;
+	transition: opacity 200ms ease-in-out;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper:hover .search::before, .wrapper.focus .search::before {
+	opacity: 0;
+}
+
 .search input {
 	width: 100%;
 	height: 100%;
