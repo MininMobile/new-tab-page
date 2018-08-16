@@ -1,0 +1,22 @@
+body::before {
+	content: "";
+	background: url("https://pre00.deviantart.net/f0e9/th/pre/f/2017/110/9/b/riptide_by_angelus_hellion-db6h2os.png") center / cover;
+	filter: blur(1em);
+	z-index: -9001;
+	position: absolute;
+	left: -2em;
+	top: -2em;
+	width: calc(100vw + 4em);
+	height: calc(100vh + 4em);
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
