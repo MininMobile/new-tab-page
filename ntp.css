@@ -5,9 +5,11 @@
 	--search-width: 50vw;
 	--text-color: #ddd;
 	--color: rgba(255, 255, 255, 0.2);
-	--wallpaper: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ftremendouswallpapers.com%2Fwp-content%2Fuploads%2F2014%2F12%2Fhd-nature-wallpapers-1920x1080.jpg&f=1");
-	--trans-props: 400ms cubic-bezier(1, 0.18, 0, 0.74);
-	--trans-props-shorts: 400ms cubic-bezier(1, 0, 0, 1);
+	--color-hover: rgba(255, 255, 255, 0.1);
+	--wallpaper: url("img/wallpaper.jpg");
+	--trans-time: 400ms;
+	--trans-props: var(--trans-time) cubic-bezier(1, 0.18, 0, 0.74);
+	--trans-props-shorts: var(--trans-time) cubic-bezier(1, 0, 0, 1);
 }
 
 body::before {
@@ -73,9 +75,13 @@ body {
 	height: var(--scale);
 	margin: 0 calc(var(--spacing) / 2);
 	background: var(--color);
-	transition: top var(--trans-props-shorts);
+	transition: top var(--trans-props-shorts), background var(--trans-time);
 	display: inline-block;
 	border-radius: var(--scale);
+}
+
+.shortcuts a:hover {
+	background: var(--color-hover);
 }
 
 .shortcuts:not(.invert) a:first-child, .shortcuts:not(.invert) a:last-child {
