@@ -1,6 +1,6 @@
 body::before {
 	content: "";
-	background: url("https://pre00.deviantart.net/f0e9/th/pre/f/2017/110/9/b/riptide_by_angelus_hellion-db6h2os.png") center / cover;
+	background: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ftremendouswallpapers.com%2Fwp-content%2Fuploads%2F2014%2F12%2Fhd-nature-wallpapers-1920x1080.jpg&f=1") center / cover;
 	filter: blur(1em);
 	z-index: -9001;
 	position: absolute;
@@ -22,15 +22,19 @@ body {
 }
 
 .container {
-	width: 100%;
+	width: 10vh;
+	transition: width 400ms;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
+.container:hover {
+	width: 50vw;
+}
+
 .search {
-	transition: width 400ms;
-	width: 10vh;
+	width: 100%;
 	height: 10vh;
 }
 
@@ -42,15 +46,10 @@ body {
 	border: none;
 	border-radius: 10vh;
 	outline: none;
-	transition: padding-left 400ms, background 400ms, color 400ms;
+	transition: padding-left 400ms, color 400ms;
 }
 
-.search:hover {
-	width: 80%;
-}
-
-.search:hover > input {
+.container:hover .search > input {
 	color: #ddd;
-	background: rgba(0, 0, 0, 0.2);
 	padding-left: 5vh;
 }
