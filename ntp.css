@@ -42,6 +42,16 @@ body {
 	border-radius: 10vh;
 }
 
+.shortcuts:not(.invert) a:first-child, .shortcuts:not(.invert) a:last-child {
+	position: relative;
+	top: calc(10vh / 2);
+}
+
+.shortcuts.invert a:first-child, .shortcuts.invert a:last-child {
+	position: relative;
+	top: calc(10vh * -1 / 2);
+}
+
 
 /* search box */
 
