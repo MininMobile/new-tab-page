@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 :root {
 	--blur: 1em;
 	--scale: 10vh;
@@ -23,6 +25,8 @@ body::before {
 	width: calc(100vw + var(--blur) * 4);
 	height: calc(100vh + var(--blur) * 4);
 }
+
+* { font-family: "Open Sans", sans-serif; }
 
 body {
 	width: 100vw;
@@ -131,7 +135,7 @@ body {
 	height: var(--scale);
 	color: var(--text-color);
 	opacity: 1;
-	transition: opacity 200ms ease-in-out;
+	transition: opacity calc(var(--trans-time) / 2) ease-in-out;
 	position: absolute;
 	display: flex;
 	align-items: center;
