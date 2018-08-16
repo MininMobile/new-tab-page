@@ -5,12 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="ntp.css" />
-	<script src="ntp.js"></script>
+	<script defer src="ntp.js"></script>
 
 	<title>New Tab</title>
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="wrapper">
 		<div class="shortcuts">
 				<a href="https://github.com/"></a>
 				<a href="https://github.com/"></a>
@@ -18,7 +18,7 @@
 		</div>
 		<div class="container">
 			<form action="https://duckduckgo.com/" method="GET" class="search">
-				<input type="text" name="q">
+				<input type="text" name="q" id="search">
 			</form>
 		</div>
 		<div class="shortcuts invert">

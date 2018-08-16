@@ -58,7 +58,7 @@ body {
 	top: calc(10vh * -1 / 2);
 }
 
-.wrapper:hover .shortcuts a {
+.wrapper:hover .shortcuts a, .wrapper.focus .shortcuts a {
 	top: 0;
 }
 
@@ -75,11 +75,11 @@ body {
 	justify-content: center;
 }
 
-.wrapper:hover .container {
+.wrapper:hover .container, .wrapper.focus .container {
 	width: 50vw;
 }
 
-.wrapper:hover .container .search {
+.wrapper:hover .container .search, .wrapper.focus .container .search {
 	padding-right: calc(10vh / 2);
 }
 
@@ -100,7 +100,7 @@ body {
 	transition: padding-left var(--trans-props), var(--trans-props);
 }
 
-.wrapper:hover .container .search > input {
+.wrapper:hover .container .search input, .wrapper.focus .container .search input {
 	color: #ddd;
 	padding-left: calc(10vh / 2);
 }
