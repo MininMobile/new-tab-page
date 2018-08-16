@@ -1,18 +1,25 @@
 :root {
+	--blur: 1em;
+	--scale: 10vh;
+	--spacing: 1vw;
+	--search-width: 50vw;
+	--text-color: #ddd;
+	--color: rgba(255, 255, 255, 0.2);
+	--wallpaper: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ftremendouswallpapers.com%2Fwp-content%2Fuploads%2F2014%2F12%2Fhd-nature-wallpapers-1920x1080.jpg&f=1");
 	--trans-props: 400ms cubic-bezier(1, 0.18, 0, 0.74);
 	--trans-props-shorts: 400ms cubic-bezier(1, 0, 0, 1);
 }
 
 body::before {
 	content: "";
-	background: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ftremendouswallpapers.com%2Fwp-content%2Fuploads%2F2014%2F12%2Fhd-nature-wallpapers-1920x1080.jpg&f=1") center / cover;
-	filter: blur(1em);
+	background: var(--wallpaper) center / cover;
+	filter: blur(var(--blur));
 	z-index: -9001;
 	position: absolute;
-	left: -2em;
-	top: -2em;
-	width: calc(100vw + 4em);
-	height: calc(100vh + 4em);
+	left: calc(var(--blur) * 2 * -1);
+	top: calc(var(--blur) * 2 * -1);;
+	width: calc(100vw + var(--blur) * 4);
+	height: calc(100vh + var(--blur) * 4);
 }
 
 body {
@@ -39,23 +46,23 @@ body {
 
 
 .shortcuts a {
-	width: 10vh;
-	height: 10vh;
-	margin: 0 0.5vw;
-	background: rgba(255, 255, 255, 0.2);
+	width: var(--scale);
+	height: var(--scale);
+	margin: 0 calc(var(--spacing) / 2);
+	background: var(--color);
 	transition: top var(--trans-props-shorts);
 	display: inline-block;
-	border-radius: 10vh;
+	border-radius: var(--scale);
 }
 
 .shortcuts:not(.invert) a:first-child, .shortcuts:not(.invert) a:last-child {
 	position: relative;
-	top: calc(10vh / 2);
+	top: calc(var(--scale) / 2);
 }
 
 .shortcuts.invert a:first-child, .shortcuts.invert a:last-child {
 	position: relative;
-	top: calc(10vh * -1 / 2);
+	top: calc(var(--scale) * -1 / 2);
 }
 
 .wrapper:hover .shortcuts a, .wrapper.focus .shortcuts a {
@@ -67,8 +74,8 @@ body {
 
 
 .container {
-	width: 10vh;
-	margin: 1vw 0 calc(1vw + 1vw / 2) 0;
+	width: var(--scale);
+	margin: var(--spacing) 0 calc(var(--spacing) + var(--spacing) / 2) 0;
 	transition: width var(--trans-props);
 	display: flex;
 	align-items: center;
@@ -76,16 +83,16 @@ body {
 }
 
 .wrapper:hover .container, .wrapper.focus .container {
-	width: 50vw;
+	width: var(--search-width);
 }
 
 .wrapper:hover .container .search, .wrapper.focus .container .search {
-	padding-right: calc(10vh / 2);
+	padding-right: calc(var(--scale) / 2);
 }
 
 .search {
 	width: 100%;
-	height: 10vh;
+	height: var(--scale);
 	transition: padding-right var(--trans-props);
 }
 
@@ -93,14 +100,15 @@ body {
 	width: 100%;
 	height: 100%;
 	color: transparent;
-	background: rgba(255, 255, 255, 0.2);
+	background: var(--color);
+	font-size: 1em;
 	border: none;
-	border-radius: 10vh;
+	border-radius: var(--scale);
 	outline: none;
 	transition: padding-left var(--trans-props), var(--trans-props);
 }
 
 .wrapper:hover .container .search input, .wrapper.focus .container .search input {
-	color: #ddd;
-	padding-left: calc(10vh / 2);
+	color: var(--text-color);
+	padding-left: calc(var(--scale) / 2);
 }
