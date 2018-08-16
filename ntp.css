@@ -51,12 +51,18 @@ body {
 	width: 80%;
 	height: 80%;
 	display: block;
+	border-radius: 50%;
 	position: relative;
 	left: 10%;
 	top: 10%;
 }
 
 .icon.github::before { -webkit-mask: url("https://png.icons8.com/ios-glyphs/512/ffffff/github.png") center / contain no-repeat; mask: url("https://png.icons8.com/ios-glyphs/512/ffffff/github.png") center / contain no-repeat; }
+.icon.youtube::before { -webkit-mask: url("https://png.icons8.com/material-rounded/512/ffffff/circled-play.png") center / contain no-repeat; mask: url("https://png.icons8.com/material-rounded/512/ffffff/circled-play.png") center / contain no-repeat; }
+.icon.reddit::before { -webkit-mask: url("https://i.imgur.com/ws2kAA0.png") center / contain no-repeat; mask: url("https://i.imgur.com/ws2kAA0.png") center / contain no-repeat; }
+.icon.trello::before { -webkit-mask: url("http://itgroove.net/brainlitter/wp-content/uploads/sites/3/2017/10/cards.png") center / contain no-repeat; mask: url("http://itgroove.net/brainlitter/wp-content/uploads/sites/3/2017/10/cards.png") center / contain no-repeat; }
+.icon.images::before { -webkit-mask: url("https://png.icons8.com/material/512/ffffff/google-logo.png") center / contain no-repeat; mask: url("https://png.icons8.com/material/512/ffffff/google-logo.png") center / contain no-repeat; }
+.icon.website::before { -webkit-mask: url("https://png.icons8.com/windows/512/ffffff/globe.png") center / contain no-repeat; mask: url("https://png.icons8.com/windows/512/ffffff/globe.png") center / contain no-repeat; }
 
 
 /* shortcuts */
